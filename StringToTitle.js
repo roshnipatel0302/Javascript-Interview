@@ -1,8 +1,16 @@
 //Convert String to Title Case
 function titleCase(str) {
+    if (str.length === 0) {
+        return ''; // Return an empty string if the input is empty
+    }
+    if (str.length === 1) {
+        return str.toUpperCase(); // If the string has only one character, return it in uppercase
+    }
+    if (str.length > 1) {   
   return str.toLowerCase().split(' ').map(function(word) {
     return word.replace(word[0], word[0].toUpperCase());
   }).join(' ');
+    }
 }
 
 //how it will be calculated for titleCase("hello world"):
